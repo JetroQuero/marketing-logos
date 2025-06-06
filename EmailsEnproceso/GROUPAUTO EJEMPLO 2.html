@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style type="text/css">
-      /* ----------------- Reset básico ----------------- */
+      /* -----------------------------------------------------------
+         RESET BÁSICO
+      ----------------------------------------------------------- */
       body,
       table,
       td,
@@ -23,7 +25,9 @@
         text-decoration: none;
       }
 
-      /* ----------------- Contenedor general ----------------- */
+      /* -----------------------------------------------------------
+         CONTENEDOR GENERAL
+      ----------------------------------------------------------- */
       .wrapper {
         width: 100% !important;
         max-width: 600px;
@@ -31,9 +35,27 @@
         background-color: transparent;
       }
 
-      /* ==================== HERO ==================== */
+      /* -----------------------------------------------------------
+         CLASES PARA LOS LOGOS SUPERIORES (3 logos, 33.33% cada uno)
+      ----------------------------------------------------------- */
+      .logo-item {
+        width: 33.33%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .logo-item img {
+        max-width: 150px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      /* -----------------------------------------------------------
+         HERO (parte superior con fondo + overlay)
+      ----------------------------------------------------------- */
       .hero-td {
-        /* Fondo del hero */
         background-image: url("https://github.com/JetroQuero/marketing-logos/blob/main/Img/FondoGroup.png?raw=true");
         background-size: cover;
         background-position: center center;
@@ -42,7 +64,7 @@
         position: relative;
       }
       .hero-overlay {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(255, 255, 255, 0.4);
         padding: 20px;
         position: relative;
       }
@@ -52,7 +74,7 @@
         left: 20px;
         width: 100px;
         height: 100px;
-        background: url("https://github.com/JetroQuero/marketing-logos/blob/main/Img/FondoGroup.png")
+        background: url("https://via.placeholder.com/100x100.png?text=ESTRELLA_ROJA")
           no-repeat center center;
         background-size: contain;
       }
@@ -63,23 +85,9 @@
         font-family: Arial, sans-serif;
         font-size: 10px;
         font-weight: bold;
-        color: #ffffff;
+        color: #000000;
         text-align: center;
         line-height: 1.1;
-      }
-      .logo-left,
-      .logo-right {
-        width: 50%;
-        display: inline-block;
-        vertical-align: top;
-        text-align: center;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      .logo-left img,
-      .logo-right img {
-        max-width: 100px;
-        margin: 0 auto;
       }
       .hero-text {
         padding: 0 20px;
@@ -89,25 +97,27 @@
         font-family: Arial, sans-serif;
         font-size: 24px;
         font-weight: bold;
-        color: #ffffff;
+        color: #e61010;
         line-height: 1.2;
         margin-bottom: 10px;
       }
       .hero-text p {
         font-family: Arial, sans-serif;
         font-size: 16px;
-        color: #ffffff;
+        color: #000000;
         line-height: 1.4;
         margin-bottom: 20px;
       }
 
-      /* ================ PRODUCTOS ================ */
+      /* -----------------------------------------------------------
+         SECCIÓN PRODUCTOS (fondo blanco)
+      ----------------------------------------------------------- */
       .products-container {
         background-color: #ffffff;
         padding: 30px 0;
       }
       .products-row {
-        font-size: 0; /* Para eliminar espacios en blanco entre inline-block */
+        font-size: 0; /* Elimina espacios en blanco entre inline-block */
         text-align: center;
         padding: 0 10px;
       }
@@ -137,15 +147,17 @@
         text-decoration: none;
       }
 
-      /* ==================== FOOTER ==================== */
+      /* -----------------------------------------------------------
+         FOOTER (parte inferior con fondo + overlay rojo)
+      ----------------------------------------------------------- */
       .footer-td {
-        background-image: url("https://github.com/JetroQuero/marketing-logos/blob/main/Img/FondoGroup.png");
+        background-image: url("https://github.com/JetroQuero/marketing-logos/blob/main/Img/FondoGroup.png?raw=true");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
       }
       .footer-overlay {
-        background-color: rgb(231, 21, 21);
+        background-color: rgba(231, 21, 21, 0.9);
         padding: 20px 10px;
         text-align: center;
       }
@@ -160,10 +172,11 @@
         text-decoration: none;
       }
 
-      /* ----------------- Responsive ----------------- */
+      /* -----------------------------------------------------------
+         MEDIA QUERIES (RESPONSIVE)
+      ----------------------------------------------------------- */
       @media only screen and (max-width: 600px) {
-        .logo-left img,
-        .logo-right img {
+        .logo-item img {
           max-width: 80px !important;
         }
         .product {
@@ -222,7 +235,7 @@
             <tr>
               <td class="hero-td">
                 <!-- Capa semitransparente -->
-            
+                <div class="hero-overlay overlay-black">
                   <!-- Starburst “Campaña especial” -->
                   <div class="starburst">
                     <div class="starburst-text">
@@ -230,7 +243,7 @@
                     </div>
                   </div>
 
-                  <!-- Logos MaFLOw | Groupauto -->
+                  <!-- Logos MaFLOw | Groupauto | Logo Adicional -->
                   <table
                     width="100%"
                     cellpadding="0"
@@ -239,17 +252,37 @@
                     style="border-collapse: collapse; margin-bottom: 20px"
                   >
                     <tr>
-                      <td class="logo-left" align="left" style="padding: 0">
-                        <img
-                          src="https://maflow.es/wp-content/uploads/2025/06/Logo-4.png"
-                          alt="Logo Maflow"
-                        />
+                      <!-- Logo 1: Maflow -->
+                      <td class="logo-item" align="center">
+                        <a href="https://maflow.es/" target="_blank">
+                          <img
+                            src="https://github.com/JetroQuero/marketing-logos/blob/main/Logos/LogoMaflow%20(2).png?raw=true"
+                            alt="Logo Maflow"
+                          />
+                        </a>
                       </td>
-                      <td class="logo-right" align="right" style="padding: 0">
-                        <img
-                          src="https://media.licdn.com/dms/image/C560BAQGZuxUMGcTJJg/company-logo_200_200/0/1574145990699?e=2147483647&v=beta&t=Swu0ohMPnXyI9Y_grQZTpnp6YQ6g8KXe_uC6z8fuir0"
-                          alt="Logo Groupauto"
-                        />
+
+                      <!-- Logo 2: Groupauto -->
+                      <td class="logo-item" align="center">
+                        <a
+                          href="https://www.groupautounioniberica.com/"
+                          target="_blank"
+                        >
+                          <img
+                            src="https://github.com/JetroQuero/marketing-logos/blob/main/Logos/LogoGroupauta.png?raw=true"
+                            alt="Logo Groupauto"
+                          />
+                        </a>
+                      </td>
+
+                      <!-- Logo 3: Borygo -->
+                      <td class="logo-item" align="center">
+                        <a href="https://maflow.es/" target="_blank">
+                          <img
+                            src="https://github.com/JetroQuero/marketing-logos/blob/main/Logos/LogoBorygo.png?raw=true"
+                            alt="Logo Borygo"
+                          />
+                        </a>
                       </td>
                     </tr>
                   </table>
@@ -286,9 +319,8 @@
                     <a
                       href="https://maflow.es/categorias-productos-automocion-borygo-industrial-coolants-innovacion-cantabria-espana/anticongelantes-refrigerantes-maflow-borygo-liquidos-automocion/anticongelantes-y-refrigerantes-borygo-maflow-cantabria/"
                       target="_blank"
+                      >Ver Producto</a
                     >
-                      Ver Producto
-                    </a>
                   </div>
 
                   <!-- Producto 2: Lavaparabrisas Monsun -->
@@ -301,9 +333,8 @@
                     <a
                       href="https://maflow.es/producto/lavaparabrisas-monsun-cantabria/"
                       target="_blank"
+                      >Ver Producto</a
                     >
-                      Ver Producto
-                    </a>
                   </div>
 
                   <!-- Producto 3: Líquido de frenos Borygo -->
@@ -316,19 +347,18 @@
                     <a
                       href="https://maflow.es/producto/liquido-de-frenos-dot-4-borygo-cantabria/"
                       target="_blank"
+                      >Ver Producto</a
                     >
-                      Ver Producto
-                    </a>
                   </div>
                 </div>
               </td>
             </tr>
             <!-- ================ FIN SECCIÓN PRODUCTOS INFERIOR ================ -->
 
-            <!-- ==================== PIE DE PÁGINA (Fondo personalizado abajo) ==================== -->
+            <!-- ==================== PIE DE PÁGINA ==================== -->
             <tr>
               <td class="footer-td">
-                <div class="footer-overlay">
+                <div class="footer-overlay overlay-red">
                   <p>
                     Visita nuestras webs:&nbsp;
                     <a
