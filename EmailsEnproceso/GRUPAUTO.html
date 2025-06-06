@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      /* Reseteos básicos */
+      body,
+      table,
+      td,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        border: 0;
+        display: block;
+        outline: none;
+        text-decoration: none;
+        height: auto;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      /* Wrapper centrado y responsive */
+      .wrapper {
+        width: 100% !important;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+      }
+      /* Contenedor de logos (parte superior) */
+      .logo-container img {
+        width: 100%;
+        max-width: 120px; /* Tamaño fijo para los logos */
+        margin: 0 auto;
+      }
+      /* Columnas de producto */
+      .column {
+        width: 33.33%;
+        max-width: 200px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .column img {
+        width: auto;
+        max-width: 120px; /* Tamaño fijo para las imágenes de producto */
+        margin: 0 auto;
+      }
+      .column p {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333333;
+        margin: 10px 0 5px 0;
+      }
+      .column a {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+      }
+      /* Media query para pantallas pequeñas */
+      @media only screen and (max-width: 600px) {
+        .column {
+          display: block;
+          width: 100% !important;
+          max-width: none;
+        }
+        .column img {
+          max-width: 120px; /* Mantener tamaño fijo en móviles */
+          width: auto;
+        }
+        .logo-container td {
+          display: block;
+          width: 100% !important;
+          text-align: center !important;
+          padding-bottom: 10px;
+        }
+        .logo-container img {
+          max-width: 80px; /* Ajuste para móvil */
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      background-color: transparent;
+    "
+  >
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+      style="border-collapse: collapse"
+    >
+      <tr>
+        <td align="center" style="padding: 0">
+          <!-- Wrapper -->
+          <table
+            class="wrapper"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            style="border-collapse: collapse; padding: 20px"
+          >
+            <!-- Logos en la parte superior -->
+            <tr>
+              <td align="center" style="padding-bottom: 20px">
+                <table
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  class="logo-container"
+                  style="border-collapse: collapse"
+                >
+                  <tr>
+                    <td align="left" style="padding: 0">
+                      <!-- URL del logo de MaFLOw -->
+                      <img
+                        src="https://tienda.velfair.com/1583-large_default/anticongelante-borygo-alu-formula-concentrado-amarillo.jpg"
+                        alt="Logo MaFLOw"
+                      />
+                    </td>
+                    <td align="right" style="padding: 0">
+                      <!-- URL del logo de Groupauto -->
+                      <img
+                        src="https://www.ancera.org/wp-content/uploads/2020/12/GAUIb-768x207-1.jpg"
+                        alt="Logo Groupauto"
+                      />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Header -->
+            <tr>
+              <td
+                align="center"
+                style="
+                  font-family: Arial, sans-serif;
+                  font-size: 24px;
+                  font-weight: bold;
+                  color: #333333;
+                  padding-bottom: 20px;
+                "
+              >
+                Hola, Asociado de Groupauto
+              </td>
+            </tr>
+
+            <!-- Contenido principal -->
+            <tr>
+              <td
+                align="center"
+                style="
+                  font-family: Arial, sans-serif;
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: #555555;
+                  padding-bottom: 20px;
+                "
+              >
+                📢 ¡Ya estamos homologados como proveedores oficiales de vuestro
+                Grupo!<br />
+                Campaña especial durante junio para la compra de refrigerantes,
+                lavaparabrisas y líquidos de frenos <em>Borygo </em>.
+              </td>
+            </tr>
+
+            <!-- Productos -->
+            <tr>
+              <td align="center" style="padding: 0">
+                <!-- Contenedor de columnas -->
+                <div style="font-size: 0; text-align: center">
+                  <!-- Producto 1 -->
+                  <div class="column">
+                    <img
+                      src="https://maflow.es/wp-content/uploads/2024/11/COOLANT-POWER-HEAVY-DUTY-692x705.jpg"
+                      alt="Anticongelantes refrigerantes"
+                    />
+                    <p>Anticongelantes refrigerantes</p>
+                    <a
+                      href="https://maflow.es/categorias-productos-automocion-borygo-industrial-coolants-innovacion-cantabria-espana/anticongelantes-refrigerantes-maflow-borygo-liquidos-automocion/anticongelantes-y-refrigerantes-borygo-maflow-cantabria/"
+                      target="_blank"
+                    >
+                      Ver Producto
+                    </a>
+                  </div>
+
+                  <!-- Producto 2 -->
+                  <div class="column">
+                    <img
+                      src="https://maflow.es/wp-content/uploads/2024/11/LIMPIAPARABRISAS-MONSUN-1012x1030.jpg"
+                      alt="Lavaparabrisas"
+                    />
+                    <p>Lavaparabrisas</p>
+                    <a
+                      href="https://maflow.es/producto/lavaparabrisas-monsun-cantabria/"
+                      target="_blank"
+                    >
+                      Ver Producto
+                    </a>
+                  </div>
+
+                  <!-- Producto 3 -->
+                  <div class="column">
+                    <img
+                      src="https://maflow.es/wp-content/uploads/2025/06/Liquido-de-frenos-dot-4-Borygo.png"
+                      alt="Líquido de frenos"
+                    />
+                    <p>Líquido de frenos</p>
+                    <a
+                      href="https://maflow.es/producto/liquido-de-frenos-dot-4-borygo-cantabria/"
+                      target="_blank"
+                    >
+                      Ver Producto
+                    </a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td
+                align="center"
+                style="
+                  font-family: Arial, sans-serif;
+                  font-size: 12px;
+                  color: #aaaaaa;
+                  padding-top: 20px;
+                "
+              >
+                Visita nuestras webs:&nbsp;
+                <a
+                  href="https://www.groupautounioniberica.com/"
+                  target="_blank"
+                >
+                  groupautounioniberica.com
+                </a>
+                <a href="https://maflow.es/" target="_blank"> / Maflow.es </a>
+                <br />&copy; 2025 Autounión Ibérica. Todos los derechos
+                reservados.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

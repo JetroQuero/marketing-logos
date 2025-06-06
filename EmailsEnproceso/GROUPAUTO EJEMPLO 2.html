@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      /* ----------------- Reset básico ----------------- */
+      body,
+      table,
+      td,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        border: 0;
+        display: block;
+        outline: none;
+        height: auto;
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+      /* ----------------- Body con fondo ----------------- */
+      body {
+        background-image: url("https://via.placeholder.com/1200x800.png?text=URL_DEL_FONDO");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      /* ----------------- Wrapper centrado ----------------- */
+      .wrapper {
+        width: 100% !important;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: transparent;
+      }
+      /* ----------------- Capa semitransparente del Hero ----------------- */
+      .hero-overlay {
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        box-sizing: border-box;
+      }
+      /* ----------------- Logos superiores ----------------- */
+      .logo-left,
+      .logo-right {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .logo-left img,
+      .logo-right img {
+        max-width: 100px; /* Ajusta tamaño fijo de logo en escritorio */
+        margin: 0 auto;
+      }
+      /* ----------------- Titulares y texto del Hero ----------------- */
+      .hero-text h1 {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+      .hero-text p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+      /* ----------------- Botones/iconos ----------------- */
+      .buttons-container {
+        text-align: center;
+        padding-bottom: 30px;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #007bff;
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #ffffff;
+        margin: 5px 5px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .btn-icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto 4px auto;
+      }
+      /* ----------------- Sección productos (fondo blanco) ----------------- */
+      .products-container {
+        background-color: #ffffff;
+        width: 100%;
+      }
+      .products-row {
+        font-size: 0;
+        text-align: center;
+        padding: 0 10px 30px 10px;
+      }
+      .product {
+        display: inline-block;
+        width: 33.33%;
+        max-width: 180px;
+        vertical-align: top;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .product img {
+        max-width: 120px;
+        margin: 0 auto 10px auto;
+      }
+      .product p {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333333;
+        margin-bottom: 6px;
+      }
+      .product a {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+      }
+      /* ----------------- “Campaña especial” (starburst) ----------------- */
+      .starburst {
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+        background: url("https://via.placeholder.com/100x100.png?text=ESTRELLA_ROJA")
+          no-repeat center center;
+        background-size: contain;
+      }
+      .starburst-text {
+        position: absolute;
+        top: 65px;
+        left: 35px;
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        line-height: 1.1;
+      }
+      /* ----------------- Pie de página ----------------- */
+      .footer {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #ffffff;
+        padding: 20px 10px;
+      }
+      .footer a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      /* ----------------- Responsive general ----------------- */
+      @media only screen and (max-width: 600px) {
+        .logo-left,
+        .logo-right {
+          display: block;
+          width: 100% !important;
+        }
+        .logo-left img,
+        .logo-right img {
+          max-width: 80px;
+        }
+        .btn {
+          display: block;
+          margin: 8px auto;
+        }
+        .product {
+          display: block;
+          width: 100% !important;
+          max-width: none;
+        }
+        .product img {
+          max-width: 100px;
+        }
+        .starburst {
+          top: 20px;
+          left: 10px;
+          width: 80px;
+          height: 80px;
+          background-size: contain;
+        }
+        .starburst-text {
+          top: 40px;
+          left: 20px;
+          font-size: 9px;
+        }
+        .footer {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="margin: 0; padding: 0; width: 100% !important">
+    <!-- Tabla principal de contención -->
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+      style="border-collapse: collapse"
+    >
+      <tr>
+        <td align="center" style="padding: 0">
+          <!-- Wrapper centrado de ancho máximo 600px -->
+          <table
+            class="wrapper"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            style="border-collapse: collapse"
+          >
+            <!-- ==================== SECCIÓN HERO (SÓLO Capa OSCURA + CONTENIDO) ==================== -->
+            <tr>
+              <td>
+                <div
+                  class="hero-overlay"
+                  style="padding: 20px; position: relative"
+                >
+                  <!-- Starburst “Campaña especial” -->
+                  <div class="starburst">
+                    <div class="starburst-text">
+                      CAMPaña<br />ESPECIAL<br />DE JUNIO
+                    </div>
+                  </div>
+
+                  <!-- Logos MaFLOw | Groupauto -->
+                  <table
+                    width="100%"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    style="border-collapse: collapse; margin-bottom: 20px"
+                  >
+                    <tr>
+                      <td class="logo-left" align="left" style="padding: 0">
+                        <img
+                          src="https://maflow.es/wp-content/uploads/2025/06/Logo-4.png"
+                          alt="Logo Maflow"
+                        />
+                      </td>
+                      <td class="logo-right" align="right" style="padding: 0">
+                        <img
+                          src="https://media.licdn.com/dms/image/C560BAQGZuxUMGcTJJg/company-logo_200_200/0/1574145990699?e=2147483647&v=beta&t=Swu0ohMPnXyI9Y_grQZTpnp6YQ6g8KXe_uC6z8fuir0"
+                          alt="Logo Groupauto"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Texto de recordatorio -->
+                  <div
+                    class="hero-text"
+                    style="padding: 0 20px; text-align: center"
+                  >
+                    <h1>
+                      RECORDATORIO: CAMPAÑA ESPECIAL<br />
+                      DE JUNIO SIGUE ACTIVA
+                    </h1>
+                    <p>
+                      No olvides aprovechar nuestra oferta exclusiva: continúa
+                      la campaña para la compra de refrigerantes, lavaparabrisas
+                      y líquidos de frenos Borygo a través de Maflow.
+                      <br />¡Haz tu pedido antes de que termine el mes!<br />
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <!-- ================== FIN SECCIÓN HERO ================== -->
+
+            <!-- ==================== SECCIÓN PRODUCTOS INFERIOR ==================== -->
+            <tr>
+              <td class="products-container">
+                <div class="products-row">
+                  <!-- Producto 1: Anticongelantes refrigerantes -->
+                  <div class="product">
+                    <img
+                      src="https://maflow.es/wp-content/uploads/2024/11/COOLANT-POWER-HEAVY-DUTY-692x705.jpg"
+                      alt="Anticongelantes refrigerantes"
+                    />
+                    <p>Anticongelantes refrigerantes</p>
+                    <a
+                      href="https://maflow.es/categorias-productos-automocion-borygo-industrial-coolants-innovacion-cantabria-espana/anticongelantes-refrigerantes-maflow-borygo-liquidos-automocion/anticongelantes-y-refrigerantes-borygo-maflow-cantabria/"
+                      target="_blank"
+                    >
+                      Ver Producto
+                    </a>
+                  </div>
+                  <!-- Producto 2: Lavaparabrisas Monsun -->
+                  <div class="product">
+                    <img
+                      src="https://maflow.es/wp-content/uploads/2024/11/LIMPIAPARABRISAS-MONSUN-1012x1030.jpg"
+                      alt="Lavaparabrisas Monsun"
+                    />
+                    <p>Lavaparabrisas Monsun</p>
+                    <a
+                      href="https://maflow.es/producto/lavaparabrisas-monsun-cantabria/"
+                      target="_blank"
+                    >
+                      Ver Producto
+                    </a>
+                  </div>
+                  <!-- Producto 3: Líquido de frenos Borygo -->
+                  <div class="product">
+                    <img
+                      src="https://maflow.es/wp-content/uploads/2025/06/Liquido-de-frenos-dot-4-Borygo.png"
+                      alt="Líquido de frenos Borygo"
+                    />
+                    <p>Líquido de frenos Borygo</p>
+                    <a
+                      href="https://maflow.es/producto/liquido-de-frenos-dot-4-borygo-cantabria/"
+                      target="_blank"
+                    >
+                      Ver Producto
+                    </a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <!-- ================ FIN SECCIÓN PRODUCTOS INFERIOR ================ -->
+
+            <!-- ==================== PIE DE PÁGINA ==================== -->
+            <tr>
+              <td class="footer">
+                Visita nuestras webs:&nbsp;
+                <a href="https://www.groupautounioniberica.com/" target="_blank"
+                  >groupautounioniberica.com</a
+                >&nbsp;|&nbsp;
+                <a href="https://maflow.es/" target="_blank">maflow.es</a>
+                <br />
+                &copy; 2025 Autounión Ibérica. Todos los derechos reservados.
+              </td>
+            </tr>
+            <!-- ================ FIN PIE DE PÁGINA ================ -->
+          </table>
+          <!-- /Wrapper -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

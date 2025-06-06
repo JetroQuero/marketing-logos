@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter Udemy</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffd60a;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .hero img {
+            width: 120px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .hero h2 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .hero button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .divider {
+            border-top: 1px solid #ffd60a;
+            margin: 30px 0;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .courses,
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .course,
+        .category {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            width: 120px;
+        }
+
+        .course img,
+        .category img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .course-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .stars {
+            color: #ffd60a;
+            font-size: 12px;
+        }
+
+        .category img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .category p {
+            font-size: 13px;
+            margin-top: 5px;
+            color: #ffd60a;
+        }
+
+        .final-banner {
+            background: #ffd60a;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .final-banner img {
+            width: 60px;
+        }
+
+        .final-banner-content {
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .final-banner-content p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .final-banner-content button {
+            margin-top: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <img src="LOGONETBEES().jpg" alt="Udemy" height="40">
+        </div>
+
+        <div class="hero">
+            <div class="hero-text">
+                <h2>Habilidades que aceleren tu carrera</h2>
+                <p>Formate y adquiere habilidades que te ayuden a avanzar.</p>
+                <button>Comienza ahora</button>
+            </div>
+            <img src="https://img-c.udemycdn.com/notices/home_carousel_slide/image/0c34d52b-cc72-49d1-b90e-bf42df51594c.jpg"
+                alt="Imagen de promoción">
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="section-title">Echa un vistazo a los nuevos cursos más destacados:</p>
+        <div class="courses">
+            <div class="course">
+                <img src="1.png" alt="">
+                <p class="course-title">Optimiza tu estrategia de ventas a través de Meta</p>
+                <div class="stars">★★★★★ (4.8)</div>
+            </div>
+            <div class="course">
+                <img src="6.png" alt="">
+                <p class="course-title">Marketing de contenidos</p>
+                <div class="stars">★★★★☆ (4.5)</div>
+            </div>
+            <div class="course">
+                <img src="9.png" alt="">
+                <p class="course-title">Descubre como la IA puede mejorar tu trabajo diario</p>
+                <div class="stars">★★★★☆ (4.6)</div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="section-title">Descubre más sobre Netbees</p>
+        <div class="categories">
+            <div class="category">
+                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721265.png" alt="">
+                <p>Desarrollo</p>
+            </div>
+            <div class="category">
+                <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="">
+                <p>Informática</p>
+            </div>
+            <div class="category">
+                <img src="https://cdn-icons-png.flaticon.com/512/2040/2040504.png" alt="">
+                <p>Negocios</p>
+            </div>
+            <div class="category">
+                <img src="https://cdn-icons-png.flaticon.com/512/3575/3575522.png" alt="">
+                <p>Estilo de vida</p>
+            </div>
+            <div class="category">
+                <img src="https://cdn-icons-png.flaticon.com/512/3665/3665949.png" alt="">
+                <p>Música</p>
+            </div>
+        </div>
+
+        <div class="final-banner">
+            <img src="https://cdn-icons-png.flaticon.com/512/3845/3845849.png" alt="Icono aprendizaje">
+            <div>
+                <p>Adáptate con el mejor aprendizaje. Tu trabajo y tu carrera pueden cambiar. Mantén el ritmo
+                    aprendiendo cada semana.</p>
+                <button>Aprender ya</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
