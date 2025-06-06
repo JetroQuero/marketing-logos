@@ -22,42 +22,69 @@
       a {
         text-decoration: none;
       }
-      /* ----------------- Body con fondo ----------------- */
-      body {
-        background-image: url("https://via.placeholder.com/1200x800.png?text=URL_DEL_FONDO");
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-      /* ----------------- Wrapper centrado ----------------- */
+
+      /* ----------------- Contenedor general ----------------- */
       .wrapper {
         width: 100% !important;
         max-width: 600px;
         margin: 0 auto;
         background-color: transparent;
       }
-      /* ----------------- Capa semitransparente del Hero ----------------- */
+
+      /* ==================== HERO ==================== */
+      .hero-td {
+        /* Fondo del hero */
+        background-image: url("URL_DE_TU_FONDO");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 20px;
+        position: relative;
+      }
       .hero-overlay {
         background-color: rgba(0, 0, 0, 0.4);
-        width: 100%;
-        box-sizing: border-box;
+        padding: 20px;
+        position: relative;
       }
-      /* ----------------- Logos superiores ----------------- */
+      .starburst {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+        background: url("https://via.placeholder.com/100x100.png?text=ESTRELLA_ROJA")
+          no-repeat center center;
+        background-size: contain;
+      }
+      .starburst-text {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        line-height: 1.1;
+      }
       .logo-left,
       .logo-right {
         width: 50%;
         display: inline-block;
         vertical-align: top;
         text-align: center;
-        padding: 10px;
+        padding: 0;
         box-sizing: border-box;
       }
       .logo-left img,
       .logo-right img {
-        max-width: 100px; /* Ajusta tamaño fijo de logo en escritorio */
+        max-width: 100px;
         margin: 0 auto;
       }
-      /* ----------------- Titulares y texto del Hero ----------------- */
+      .hero-text {
+        padding: 0 20px;
+        text-align: center;
+      }
       .hero-text h1 {
         font-family: Arial, sans-serif;
         font-size: 24px;
@@ -73,38 +100,16 @@
         line-height: 1.4;
         margin-bottom: 20px;
       }
-      /* ----------------- Botones/iconos ----------------- */
-      .buttons-container {
-        text-align: center;
-        padding-bottom: 30px;
-      }
-      .btn {
-        display: inline-block;
-        background-color: #007bff;
-        border-radius: 4px;
-        padding: 8px 12px;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        color: #ffffff;
-        margin: 5px 5px;
-        text-align: center;
-        vertical-align: middle;
-      }
-      .btn-icon {
-        display: block;
-        width: 30px;
-        height: 30px;
-        margin: 0 auto 4px auto;
-      }
-      /* ----------------- Sección productos (fondo blanco) ----------------- */
+
+      /* ================ PRODUCTOS ================ */
       .products-container {
         background-color: #ffffff;
-        width: 100%;
+        padding: 30px 0;
       }
       .products-row {
-        font-size: 0;
+        font-size: 0; /* Para eliminar espacios en blanco entre inline-block */
         text-align: center;
-        padding: 0 10px 30px 10px;
+        padding: 0 10px;
       }
       .product {
         display: inline-block;
@@ -131,77 +136,58 @@
         color: #007bff;
         text-decoration: none;
       }
-      /* ----------------- “Campaña especial” (starburst) ----------------- */
-      .starburst {
-        position: absolute;
-        top: 50px;
-        left: 20px;
-        width: 100px;
-        height: 100px;
-        background: url("https://via.placeholder.com/100x100.png?text=ESTRELLA_ROJA")
-          no-repeat center center;
-        background-size: contain;
+
+      /* ==================== FOOTER ==================== */
+      .footer-td {
+        background-image: url("URL_DE_TU_FONDO");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
       }
-      .starburst-text {
-        position: absolute;
-        top: 65px;
-        left: 35px;
-        font-family: Arial, sans-serif;
-        font-size: 10px;
-        font-weight: bold;
-        color: #ffffff;
+      .footer-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px 10px;
         text-align: center;
-        line-height: 1.1;
       }
-      /* ----------------- Pie de página ----------------- */
-      .footer {
-        text-align: center;
+      .footer-overlay p {
         font-family: Arial, sans-serif;
         font-size: 12px;
         color: #ffffff;
-        padding: 20px 10px;
+        margin: 5px 0;
       }
-      .footer a {
+      .footer-overlay a {
         color: #ffffff;
         text-decoration: none;
       }
-      /* ----------------- Responsive general ----------------- */
+
+      /* ----------------- Responsive ----------------- */
       @media only screen and (max-width: 600px) {
-        .logo-left,
-        .logo-right {
-          display: block;
-          width: 100% !important;
-        }
         .logo-left img,
         .logo-right img {
-          max-width: 80px;
-        }
-        .btn {
-          display: block;
-          margin: 8px auto;
+          max-width: 80px !important;
         }
         .product {
-          display: block;
+          display: block !important;
           width: 100% !important;
-          max-width: none;
+          max-width: none !important;
         }
         .product img {
-          max-width: 100px;
+          max-width: 100px !important;
         }
         .starburst {
-          top: 20px;
-          left: 10px;
-          width: 80px;
-          height: 80px;
-          background-size: contain;
+          top: 20px !important;
+          left: 10px !important;
+          width: 80px !important;
+          height: 80px !important;
+          background-size: contain !important;
         }
         .starburst-text {
-          top: 40px;
-          left: 20px;
-          font-size: 9px;
+          top: 40px !important;
+          left: 20px !important;
+          font-size: 9px !important;
         }
-        .footer {
-          font-size: 11px;
+        .footer-overlay {
+          font-size: 11px !important;
         }
       }
     </style>
@@ -218,25 +204,29 @@
     >
       <tr>
         <td align="center" style="padding: 0">
-          <!-- Wrapper centrado de ancho máximo 600px -->
+          <!-- Wrapper centrado, max-width 600px -->
           <table
             class="wrapper"
+            width="600"
             cellpadding="0"
             cellspacing="0"
             role="presentation"
-            style="border-collapse: collapse"
+            style="
+              border-collapse: collapse;
+              width: 100%;
+              max-width: 600px;
+              background-color: transparent;
+            "
           >
-            <!-- ==================== SECCIÓN HERO (SÓLO Capa OSCURA + CONTENIDO) ==================== -->
+            <!-- ==================== SECCIÓN HERO (Fondo personalizado arriba) ==================== -->
             <tr>
-              <td>
-                <div
-                  class="hero-overlay"
-                  style="padding: 20px; position: relative"
-                >
+              <td class="hero-td">
+                <!-- Capa semitransparente -->
+                <div class="hero-overlay">
                   <!-- Starburst “Campaña especial” -->
                   <div class="starburst">
                     <div class="starburst-text">
-                      CAMPaña<br />ESPECIAL<br />DE JUNIO
+                      CAMPAÑA<br />ESPECIAL<br />DE JUNIO
                     </div>
                   </div>
 
@@ -264,13 +254,10 @@
                     </tr>
                   </table>
 
-                  <!-- Texto de recordatorio -->
-                  <div
-                    class="hero-text"
-                    style="padding: 0 20px; text-align: center"
-                  >
+                  <!-- Texto de recordatorio sobre el fondo -->
+                  <div class="hero-text">
                     <h1>
-                      RECORDATORIO: CAMPAÑA ESPECIAL<br />
+                      CAMPAÑA ESPECIAL<br />
                       DE JUNIO SIGUE ACTIVA
                     </h1>
                     <p>
@@ -285,7 +272,7 @@
             </tr>
             <!-- ================== FIN SECCIÓN HERO ================== -->
 
-            <!-- ==================== SECCIÓN PRODUCTOS INFERIOR ==================== -->
+            <!-- ==================== SECCIÓN PRODUCTOS INFERIOR (Fondo blanco) ==================== -->
             <tr>
               <td class="products-container">
                 <div class="products-row">
@@ -303,6 +290,7 @@
                       Ver Producto
                     </a>
                   </div>
+
                   <!-- Producto 2: Lavaparabrisas Monsun -->
                   <div class="product">
                     <img
@@ -317,6 +305,7 @@
                       Ver Producto
                     </a>
                   </div>
+
                   <!-- Producto 3: Líquido de frenos Borygo -->
                   <div class="product">
                     <img
@@ -336,16 +325,24 @@
             </tr>
             <!-- ================ FIN SECCIÓN PRODUCTOS INFERIOR ================ -->
 
-            <!-- ==================== PIE DE PÁGINA ==================== -->
+            <!-- ==================== PIE DE PÁGINA (Fondo personalizado abajo) ==================== -->
             <tr>
-              <td class="footer">
-                Visita nuestras webs:&nbsp;
-                <a href="https://www.groupautounioniberica.com/" target="_blank"
-                  >groupautounioniberica.com</a
-                >&nbsp;|&nbsp;
-                <a href="https://maflow.es/" target="_blank">maflow.es</a>
-                <br />
-                &copy; 2025 Autounión Ibérica. Todos los derechos reservados.
+              <td class="footer-td">
+                <div class="footer-overlay">
+                  <p>
+                    Visita nuestras webs:&nbsp;
+                    <a
+                      href="https://www.groupautounioniberica.com/"
+                      target="_blank"
+                      >groupautounioniberica.com</a
+                    >&nbsp;|&nbsp;
+                    <a href="https://maflow.es/" target="_blank">maflow.es</a>
+                  </p>
+                  <p>
+                    &copy; 2025 Autounión Ibérica. Todos los derechos
+                    reservados.
+                  </p>
+                </div>
               </td>
             </tr>
             <!-- ================ FIN PIE DE PÁGINA ================ -->
